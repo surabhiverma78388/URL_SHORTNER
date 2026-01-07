@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html>
+<head>
+    <title>URL Shortener | Professional</title>
+    <style>
+        /* Base Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f8f9fa; 
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Card Container */
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 { 
+            font-size: 1.8rem; 
+            margin-bottom: 25px; 
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Form Styling */
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] { 
+            flex: 1;
+            padding: 12px 15px; 
+            border-radius: 6px; 
+            border: 1px solid #ced4da; 
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #0d6efd;
+        }
+
+        button { 
+            padding: 12px 24px; 
+            background: #0d6efd; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        button:hover { 
+            background: #0b5ed7; 
+        }
+
+        /* Dashboard Button Link */
+        .btn-dashboard {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #0d6efd;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .btn-dashboard:hover {
+            color: #0a58ca;
+            border-bottom: 1px solid #0a58ca;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: fixed;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #adb5bd;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .blue-heart {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>URL Shortener</h1>
+        
+        <form action="/web/shorten" method="POST" class="form-group">
+            <input type="text" name="url" placeholder="Enter long link here" required>
+            <button type="submit">Shorten</button>
+        </form>
+
+        <div>
+            <a href="/dashboard" class="btn-dashboard">
+                View Dashboard
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        Made with <span class="blue-heart"><i class="fa-solid fa-heart"></i></span> by sverma
+    </footer>
+
+</body>
+</html>
