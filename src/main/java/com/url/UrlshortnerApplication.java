@@ -2,16 +2,9 @@ package com.url;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class UrlshortnerApplication extends SpringBootServletInitializer {
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(UrlshortnerApplication.class);
-	}
+public class UrlshortnerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UrlshortnerApplication.class, args);
